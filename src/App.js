@@ -1,24 +1,24 @@
 
 import './App.css';
+import Header from './components/header/header';
+import MainBlock from './components/main-block/main-block';
+import SideBlock from './components/side-block/side-block';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-        Hye
+        <Header/>
       </header>
+      <section>
+      <SideBlock/>
+        <MainBlock/>
+      
+     
+     </section>
+      <footer>
+
+      </footer>
     </div>
   );
 }
