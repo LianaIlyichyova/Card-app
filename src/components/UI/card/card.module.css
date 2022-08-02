@@ -1,0 +1,20 @@
+
+
+.card{
+    padding: 5px 5px 45px 45px;
+    color:teal;
+    background-color: transparent;
+    border: 1px solid teal;
+    margin-right: 5px;
+}
+
+.deleteButton{
+    color: rgb(6, 34, 34);;
+    float:right;
+    font-size: 20px;
+}
+
+.number{
+    font-size: 30px;
+    margin-top: 40px;
+}
