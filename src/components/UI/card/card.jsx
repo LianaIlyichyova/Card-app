@@ -9,7 +9,7 @@ export default function Card(props) {
 
   function deleteCard() {
     console.log(props.index);
-    let newList = [...list].filter((card, index) => index !== props.index);
+    let newList = [...list].filter((card, index) => card.id !== props.id);
     dispatch({
       type: "list-state",
       payload: {
@@ -23,7 +23,7 @@ export default function Card(props) {
       <button className={classes.deleteButton} onClick={deleteCard}>
         X
       </button>
-      <div className={classes.number}>{props.name}</div>
+      <div className={classes.number}>{props.title}</div>
     </div>
   );
 }
