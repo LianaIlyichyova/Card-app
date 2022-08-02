@@ -24,14 +24,14 @@ export default function Header(){
         dispatch({
             type: "list-state",
             payload: {
-              list: [...list,num],
+              list: [...list,{id: Date.now(), title: num}],
             },
           });
     }
 
     function sortCards(){
         let sortedList=[...list];
-        sortedList.sort((a, b)=> a-b);
+        sortedList.sort((a, b)=> a.title-b.title);
         dispatch({
             type: "list-state",
             payload: {
@@ -41,9 +41,9 @@ export default function Header(){
     }
 
     return(
-        <header>
+        <div>
             <Button onClick = {handleAddCard}>Add Card</Button>
             <Button onClick = {sortCards}>Sort Cards</Button>
-        </header>
+        </div>
     )
 }
