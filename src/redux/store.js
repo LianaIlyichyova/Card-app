@@ -24,6 +24,6 @@ const store = createStore(
 
 export default store;
 
-export function selectList(state){
+export function getList(state){
     return state.currentList.list;
 }
