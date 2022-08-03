@@ -1,11 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
+import { selectList } from "../../redux/store";
 import classes from "./header.module.css";
 
 export default function Header() {
-  const list = useSelector(function (state) {
-    return state.currentList.list;
-  });
+  const list = useSelector(selectList);
   const dispatch = useDispatch();
 
   function findUniqueRandomTitle() {
