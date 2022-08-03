@@ -23,3 +23,7 @@ const store = createStore(
 );
 
 export default store;
+
+export function selectList(state){
+    return state.currentList.list;
+}

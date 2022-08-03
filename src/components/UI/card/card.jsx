@@ -1,14 +1,13 @@
 import classes from "./card.module.css";
 import { useSelector, useDispatch } from "react-redux";
+import { selectList } from "../../../redux/store";
 
 export default function Card(props) {
-  const list = useSelector(function (state) {
-    return state.currentList.list;
-  });
+  const list = useSelector(selectList);
   let dispatch = useDispatch();
 
   function deleteCard() {
-    console.log(props.index);
+
     let newList = [...list].filter((card, index) => card.id !== props.id);
     dispatch({
       type: "list-state",
