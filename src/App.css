@@ -9,8 +9,7 @@
   flex-direction: column;
 }
 
-
-footer{
+footer {
   position: fixed;
   font-size: 12px;
   left: 0;
@@ -21,7 +20,7 @@ footer{
   text-align: center;
 }
 
-header{
+header {
   width: 70%;
   padding: 20px 0px 20px 40px;
   border: 0.5px solid teal;

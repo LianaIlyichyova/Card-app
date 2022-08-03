@@ -6,7 +6,6 @@ import SideBlock from "./components/side-block/side-block";
 function App() {
   return (
     <div className="App">
-      
       <header className="App-header">
         <Header />
       </header>
