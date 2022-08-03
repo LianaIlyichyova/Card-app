@@ -1,10 +1,10 @@
 import Card from "../UI/card/card";
+import { getList } from "../../redux/store";
 import classes from "./main-block.module.css";
 import { useSelector } from "react-redux";
-import { selectList } from "../../redux/store";
 
 export default function MainBlock() {
-  const list = useSelector(selectList);
+  const list = useSelector(getList);
 
   return (
     <div className={classes.mainBlock}>
