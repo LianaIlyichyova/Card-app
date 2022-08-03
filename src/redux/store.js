@@ -3,7 +3,7 @@ import { createStore } from "redux";
 const store = createStore(
   function (state, action) {
     if (action.type === "list-state") {
-      sessionStorage.setItem("list",JSON.stringify(action.payload.list))
+      sessionStorage.setItem("list", JSON.stringify(action.payload.list));
       return {
         ...state,
         currentList: {
@@ -15,7 +15,9 @@ const store = createStore(
   },
   {
     currentList: {
-      list: sessionStorage.getItem("list") ? JSON.parse(sessionStorage.getItem("list")) : [],
+      list: sessionStorage.getItem("list")
+        ? JSON.parse(sessionStorage.getItem("list"))
+        : [],
     },
   }
 );
