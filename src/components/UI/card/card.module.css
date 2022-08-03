@@ -18,6 +18,11 @@
   background-color: transparent;
 }
 
+.deleteButton:hover {
+  color: teal;
+  font-size: 21px;
+}
+
 .number {
   font-size: 30px;
   padding: 20px 45px 0px 20px;

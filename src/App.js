@@ -6,12 +6,13 @@ import SideBlock from "./components/side-block/side-block";
 function App() {
   return (
     <div className="App">
-      <SideBlock />
+      
       <header className="App-header">
         <Header />
       </header>
+      <SideBlock />
       <MainBlock />
-      <footer></footer>
+      <footer>footer</footer>
     </div>
   );
 }

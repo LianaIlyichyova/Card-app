@@ -1,10 +1,10 @@
 .mainBlock {
   padding-top: 20px;
   overflow: auto;
-  height: 85.9vh;
-  width: 65%;
-  border: 0.5px solid teal;
-  margin-left: 40px;
+  height: 84vh;
+  width: 70%;
+  border-right: 0.5px solid teal;
+  padding-left: 40px;
 }
 
 .mainBlock::-webkit-scrollbar {
