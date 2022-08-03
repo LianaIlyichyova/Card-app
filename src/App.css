@@ -14,14 +14,16 @@ footer {
   font-size: 12px;
   left: 0;
   bottom: 0;
-  width: 70%;
   height: 30px;
-  border: 0.5px solid teal;
   text-align: center;
+  color: teal;
 }
 
 header {
-  width: 70%;
   padding: 20px 0px 20px 40px;
-  border: 0.5px solid teal;
+}
+
+footer, header{
+  border: 0.3px solid teal;
+  width: 70%;
 }

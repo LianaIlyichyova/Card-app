@@ -32,7 +32,6 @@ export default function Header() {
   function sortCards() {
     let sortedList = [...list];
     sortedList.sort((a, b) => a.title - b.title);
-
     dispatch({
       type: "list-state",
       payload: {
