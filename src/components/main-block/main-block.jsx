@@ -10,7 +10,7 @@ export default function MainBlock() {
     <div className={classes.mainBlock}>
       <div className={classes.table}>
         {list.map((card) => (
-          <Card title={card.title} id={card.id} />
+          <Card title={card.title} id={card.id} key = {card.id}/>
         ))}
       </div>
     </div>
