@@ -1,5 +1,6 @@
-import Button from "../UI/button/button";
 import { useDispatch, useSelector } from "react-redux";
+import { v4 as uuidv4 } from 'uuid';
+import classes from "./header.module.css";
 
 export default function Header() {
   const list = useSelector(function (state) {
@@ -10,7 +11,7 @@ export default function Header() {
   function findUniqueRandomTitle() {
     let isAddedItem = false;
     while (!isAddedItem) {
-      let item = Math.floor(Math.random() * (list.length + 1) ** 2);
+      let item = Math.floor((Math.random() + 1) * (list.length + 1) ** 2);
       if (list.indexOf(item) === -1) {
         isAddedItem = true;
         return item;
@@ -23,7 +24,7 @@ export default function Header() {
     dispatch({
       type: "list-state",
       payload: {
-        list: [...list, { id: Date.now(), title: num }],
+        list: [...list, { id: uuidv4(), title: num }],
       },
     });
   }
@@ -42,8 +43,12 @@ export default function Header() {
 
   return (
     <div>
-      <Button onClick={handleAddCard}>Add Card</Button>
-      <Button onClick={sortCards}>Sort Cards</Button>
+      <button onClick={handleAddCard} className={classes.btn}>
+        Add Card
+      </button>
+      <button onClick={sortCards} className={classes.btn}>
+        Sort Cards
+      </button>
     </div>
   );
 }
